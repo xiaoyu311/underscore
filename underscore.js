@@ -1,5 +1,5 @@
 (function () {
-    // self 为了兼容window跟web worker  global兼容node环境  Function('return this')()兼容node vm沙箱环境（但是目前不知道为什么要把 return this 改写成函数自执行）
+    // self 为了兼容window跟web worker  global兼容node环境  Function('return this')()兼容node vm沙箱环境（但是目前不知道为什么要把 this 改写成函数自执行）
     // 小程序下 无this 所以root定义为对象
     var root = (typeof self === 'object' && self.self === self && self) ||
         (typeof global === 'object' && global.global === global && global) ||
